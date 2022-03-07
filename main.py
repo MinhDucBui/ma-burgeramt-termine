@@ -21,7 +21,7 @@ def check_appointment(refresh_rate):
         all_appointments = menu.find_all('p')
         all_names = menu.find_all('a', {"class": "infolink"})
         if len(all_names) != 14:
-            notification_desktop("Not all locations found!")
+            notify.send("Not all locations found!")
 
         for index in range(len(all_appointments)):
             title = "Termin frei in {}".format(all_names[index].getText())
