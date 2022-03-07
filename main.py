@@ -5,8 +5,7 @@ from plyer import notification
 from datetime import datetime
 
 
-URL = "https://tempus-termine.com/termine/index.php?anr=36&sna=T944ade0c8194e47704d5d6090171ce65&action=open&page" \
-      "=standortauswahl&tasks=3329-3330&kuerzel=BPA-RP&schlangen=2-6-8-9-10-11-12-13-14-15-16-17-18-19 "
+URL = "https://tempus-termine.com/termine/index.php?anr=36&sna=Tfe8bf85178a7e455d07aae6ed85f85a3&action=open&page=standortauswahl&tasks=3329&kuerzel=BPA&schlangen=2-6-8-9-10-11-12-13-14-15-16-17-18-19"
 
 
 def notification_desktop(title):
@@ -16,15 +15,6 @@ def notification_desktop(title):
         app_icon=None,
         timeout=10,
     )
-
-
-def telegram_bot_sendtext(bot_message):
-    bot_token = ''  # Enter bot token
-    bot_chatID = ''  # Enter bot chatID
-    send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
-
-    response = requests.get(send_text)
-    return response.json()
 
 
 def check_appointment():
