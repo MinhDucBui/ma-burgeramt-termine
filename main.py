@@ -32,8 +32,10 @@ def check_appointment():
         try:
             if "Keine Termine verfügbar" != all_appointments[index].getText():
                 notification_desktop(title)
+                return
         except:
             notification_desktop(title)
+            return
 
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
